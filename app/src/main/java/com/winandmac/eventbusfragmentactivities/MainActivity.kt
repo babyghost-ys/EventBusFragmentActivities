@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationBarView
 import com.winandmac.eventbusfragmentactivities.fragments.PublisherFragment
 import com.winandmac.eventbusfragmentactivities.fragments.SubscriberAFragment
+import com.winandmac.eventbusfragmentactivities.fragments.SubscriberBFragment
 import java.util.concurrent.Flow.Publisher
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     // Init all the fragments
     private val publisherFragment = PublisherFragment()
     private val subscriberAFragment = SubscriberAFragment()
+    private val subscriberBFragment = SubscriberBFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.menu_publisher -> replaceFragment(publisherFragment)
                 R.id.menu_subscribera -> replaceFragment(subscriberAFragment)
+                R.id.menu_subscriberb -> replaceFragment(subscriberBFragment)
             }
             true
         }

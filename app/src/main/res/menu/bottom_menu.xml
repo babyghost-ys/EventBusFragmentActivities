@@ -6,4 +6,7 @@
     <item
         android:id="@+id/menu_subscribera"
         android:title="Subscriber A" />
+    <item
+        android:id="@+id/menu_subscriberb"
+        android:title="Subscriber b" />
 </menu>
