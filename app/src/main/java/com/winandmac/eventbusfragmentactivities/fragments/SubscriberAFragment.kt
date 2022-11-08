@@ -30,8 +30,8 @@ class SubscriberAFragment : Fragment(R.layout.fragment_subscriber_a) {
     }
 
     // EventBus - Unsubscribe from the event
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onStop() {
+        super.onStop()
         EventBus.getDefault().unregister(this)
     }
 
