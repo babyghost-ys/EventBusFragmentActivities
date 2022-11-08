@@ -6,21 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.winandmac.eventbusfragmentactivities.R
+import com.winandmac.eventbusfragmentactivities.databinding.FragmentSubscriberABinding
 
-class SubscriberAFragment : Fragment() {
+class SubscriberAFragment : Fragment(R.layout.fragment_subscriber_a) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
+    private lateinit var binding: FragmentSubscriberABinding
 
-        }
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentSubscriberABinding.bind(view)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_subscriber_a, container, false)
     }
 }
